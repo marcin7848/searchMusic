@@ -1,0 +1,309 @@
+body {
+    background: #485563;
+    background: -webkit-linear-gradient(to right, #29323c, #485563);
+    background: linear-gradient(to right, #29323c, #485563);
+    margin: 0;
+    padding: 0;
+    color: #FFFFFF;
+}
+
+.header{
+    background: #0d0d0d;
+    width: 100%;
+    height: 70px;
+    margin: 0 auto;
+    padding: 0 auto;
+    line-height: 70px;
+    text-align: right;
+}
+.headerText {
+    display: inline;
+    border: 1px white solid;
+    background: #3A6083;
+    padding: 5px;
+}
+
+.searchFieldFull{
+    position: absolute;
+    width: 550px;
+    height: 300px;
+    background: #232526;
+    background: -webkit-linear-gradient(to bottom, #0d0d0d, #333333);
+    background: linear-gradient(to bottom, #0d0d0d, #333333);
+    border-radius: 50px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.searchText{
+    text-align: center;
+    font-size: 30px;
+    margin: 30px 0 0 0;
+}
+
+.searchField{
+    width: 100%;
+    height: 60px;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+}
+
+#searchValue{
+    background: #232526;
+    border: 1px solid #666666;
+    height: 100%;
+    width: 80%;
+    margin: 0 0 0 10px;
+    color: #FFFFFF;
+    font-size: 30px;
+}
+
+#searchSubmit{
+    background: url(/View/images/search_icon.png) no-repeat;
+    background-size: contain;
+    width: 12%;
+    height: 100%;
+    position: absolute;
+    margin-left: 10px;
+    margin-top: 3px;
+    border: 0;
+}
+
+.searchResults{
+    background: #232526;
+    background: -webkit-linear-gradient(to left, #414345, #232526);
+    background: linear-gradient(to left, #414345, #232526);
+    width: 550px;
+
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+
+    display: none;
+}
+
+.searchResults .result{
+    height: 50px;
+    width: 100%;
+    line-height: 50px;
+    text-align: center;
+    background: #5C258D;
+    background: -webkit-linear-gradient(to bottom, #4389A2, #5C258D);
+    background: linear-gradient(to bottom, #4389A2, #5C258D);
+    max-width:100%;
+    overflow: hidden;
+}
+
+.searchResults .result:hover {
+    background: #134E5E;
+    background: -webkit-linear-gradient(to bottom, #71B280, #134E5E);
+    background: linear-gradient(to bottom, #71B280, #134E5E);
+
+}
+
+#errorSearch{
+    height: 25px;
+    text-align: center;
+    font-size: 20px;
+    display: none;
+    background-color: red;
+}
+
+.loading{
+    position: absolute;
+    max-width: 100px;
+    max-height: 100px;
+    z-index: 3;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    display: none;
+}
+
+.trackInfo{
+    position: absolute;
+    background: #16222A;
+    background: -webkit-linear-gradient(to bottom, #3A6073, #16222A);
+    background: linear-gradient(to bottom, #3A6073, #16222A);
+
+    border-radius: 25px;
+    width: 1000px;
+
+    top: 70px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    z-index: -1;
+
+    display: none;
+
+    padding: 50px;
+}
+
+.trackBody{
+    width: 60%;
+}
+
+.albumBody{
+    width: 40%;
+}
+
+
+.trackMain{
+    display: flex;
+
+}
+
+#trackArtist{
+    margin: 10px 0 0 20px;
+    font-size: 20px;
+}
+
+#trackName{
+    margin: 0 0 0 20px;
+    font-size: 30px;
+}
+
+#albumName{
+    margin: 20px 0 0 20px;
+    font-size: 20px;
+}
+
+#trackListeners{
+    margin: 20px 0 0 20px;
+    font-size: 17px;
+}
+
+#trackDescription{
+    margin: 10px;
+
+}
+
+#trackYoutubeField{
+    margin: 10px 0 0 0;
+    width: 100%;
+    text-align: center;
+}
+
+#albumNameMain{
+    text-align: center;
+    font-size: 30px;
+    margin: 10px 0 0 0;
+}
+
+#albumRelease{
+    font-size: 20px;
+    margin: 5px 0 0 5px;
+}
+
+#albumListeners{
+    font-size: 20px;
+    margin: 5px 0 0 5px;
+}
+
+.albumTracksText{
+    margin: 5px 0 10px 5px;
+}
+
+.albumTracks{
+    margin: 0;
+}
+.albumTracks li{
+    margin-bottom: 8px;
+}
+
+.backgroundPanel{
+    background-color: rgba(0,0,0,0.5);
+    width: 100%;
+    height: calc(100% - 70px);
+    position: absolute;
+    z-index: 1;
+    margin: 70px 0 0 0;
+
+    display: none;
+}
+
+.panelField{
+    width: 400px;
+    height: 500px;
+    background: #16222A;
+    background: -webkit-linear-gradient(to bottom, #3A6073, #16222A);
+    background: linear-gradient(to bottom, #3A6083, #16242A);
+    border-radius: 30px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 20px auto;
+    padding: 10px;
+
+    display: none;
+}
+
+.panelTitle{
+    text-align: center;
+    font-size: 35px;
+    margin: 0;
+}
+
+.errorPanelText{
+    margin: 0;
+    padding: 0;
+    display: inline;
+    color: #FF3030;
+}
+
+.buttonPanel{
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    font-size: 20px;
+    width: 120px;
+}
+
+.followTrack{
+    border: 1px white solid;
+    background: #3A6083;
+    margin: 20px 0 0 20px;
+    font-size: 17px;
+    color: #FFFFFF;
+}
+
+.panelList{
+    display: flex;
+    font-size: 15px;
+    text-align: center;
+    height: 60px;
+
+}
+
+.panelTrack{
+    width: 90%;
+    background: #16222A;
+    background: -webkit-linear-gradient(to bottom, #3A6A83, #16444A);
+    background: linear-gradient(to bottom, #3A6A83, #16444A);
+}
+
+.panelDelete{
+    line-height: 60px;
+    width: 10%;
+    background: #16222A;
+    background: -webkit-linear-gradient(to bottom, #3A6073, #16222A);
+    background: linear-gradient(to bottom, #FF0000, #16242A);
+}
+
+.panelText{
+    margin: 0;
+    padding: 0;
+}

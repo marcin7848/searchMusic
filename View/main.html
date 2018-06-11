@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Wyszukiwarka utworów muzycznych</title>
+    <script src="./View/style/jquery.min.js"></script>
+    <script src="./View/style/main.js"></script>
+    <link rel="stylesheet" type="text/css" href="./View/style/style.css">
+
+</head>
+<body>
+    <img class="loading" src="./View/images/loading.gif" alt="Loading" />
+
+    <div class="backgroundPanel">
+        <div class="panelField">
+            <!-- INNER HTML -->
+        </div>
+    </div>
+
+    <div class="searchFieldFull">
+        <p class="searchText">Search For Music!</p>
+        <div class="searchField">
+            <input type="text" id="searchValue" name="searchValue" autocomplete="off" />
+            <input type="button" id="searchSubmit" value="" />
+            <p id="errorSearch"></p>
+        </div>
+    </div>
+    <div class="header">
+        <?php
+        if(empty($_SESSION['logged']) OR  ($_SESSION['logged'] == false))
+        {
+            echo '<p id="loginMenu" class="headerText">Zaloguj się!</p>
+                <p id="registerMenu" class="headerText">Zarejestruj się!</p>';
+        }
+        else{
+            echo '<p style="text-align: left; display: inline;">Witaj, '.$_SESSION['login'].'!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>';
+            echo '<p id="panelSoundTracksMenu" class="headerText">Twoja muzyka</p>
+                <p id="logout" class="headerText">Wyloguj się!</p>';
+        }
+
+        ?>
+
+    </div>
+
+    <div class="searchResults"><!-- SHOW RESULTS --></div>
+
+    <div class="trackInfo">
+        <div class="trackBody">
+            <div class="trackMain">
+                <img id="trackImage" src="" alt="trackImage" />
+                <div>
+                    <p id="trackArtist"></p>
+                    <p id="trackName"></p>
+                    <p id="albumName"></p>
+                    <p id="trackListeners"></p>
+                    <button class="followTrack" id="followTrack"></button>
+                    <input type="hidden" id="trackHref" />
+
+                </div>
+            </div>
+            <div id="trackDescription"></div>
+
+            <div id="trackYoutubeField">
+                <iframe id="trackYoutube" width="420" height="315"
+                        src="">
+                </iframe>
+            </div>
+        </div>
+
+        <div class="albumBody">
+            <p id="albumNameMain"></p>
+            <p id="albumRelease"></p>
+            <p id="albumListeners"></p>
+            <p class="albumTracksText">Lista utworów na płycie:</p>
+
+            <ol class="albumTracks">
+            </ol>
+        </div>
+    </div>
+
+
+</body>
+</html>
